@@ -95,6 +95,8 @@ $("img").click(() => {
         });
     }
 
-    window.open("http://www.facebook.com/dialog/send?app_id=435022673987553&link=https://i.gifer.com/origin/b2/b2f4b18aa4a9a3b65d1c78edeced27f9_w200.gif");
-
+    FB.ui({
+        method: 'send',
+        link: 'https://i.gifer.com/origin/b2/b2f4b18aa4a9a3b65d1c78edeced27f9_w200.gif'
+    });
 });
