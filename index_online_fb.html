@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PI4</title>
+    <style>
+      .dbgmid{
+        display: table;
+        margin: 0 auto;
+      }
+      .dbgpad{
+        padding: 15px;
+      }
+      .dbgtpad{
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '435022673987553',
+              cookie     : true,
+              xfbml      : true,
+              version    : 'v6.0'
+            });
+
+            FB.AppEvents.logPageView();
+
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "https://connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="container text-light" id="pgdiv">
+      <div class="dbgmid">
+        <button type="button" class="bg-white img-thumbnail dbgpad" id="clrwhite"></button>
+        <button type="button" class="bg-secondary img-thumbnail dbgpad" id="clrsec"></button>
+        <button type="button" class="bg-dark img-thumbnail dbgpad" id="clrdark"></button>
+      </div>
+      <br/>
+      <div class="dbgmid">
+        <button type="button" class="bg-white img-thumbnail dbgtpad" id="dirleft">&lt;</button>
+        <button type="button" class="bg-white img-thumbnail dbgtpad" id="dircenter">^</button>
+      </div>
+      <header class="dbgmid">
+        <h1>Черга для використання пральних машинок</h1>
+      </header>
+
+        <table class="table table-bordered table-dark">
+          <tr>
+            <th>Режим прання</th>
+            <td>Бавовна</td>
+            <td>Синтетика</td>
+            <td>Шерсть</td>
+            <td> Шовк </td>
+            <td>Експрес</td>
+          </tr>
+          <tr>
+            <th>Тривалість прання</th>
+            <td>155 хв.</td>
+            <td>85 хв.</td>
+            <td>55 хв.</td>
+            <td>55 хв.</td>
+            <td>15 хв.</td>
+          </tr>
+        </table>
+
+      <form class="form-group dbgmid" name="inputform">
+        <label for="formtype" class="dbgmid">Тип &nbsp;</label>
+        <select id="formtype" class="btn btn-secondary dropdown-toggle text-light dbgmid">
+          <option class="text-light" value="cotton">Бавовна</option>
+          <option class="text-light" value="synth">Синтетика</option>
+          <option class="text-light" value="wool">Шерсть</option>
+          <option class="text-light" value="silk">Шовк</option>
+          <option class="text-light" value="express" selected="selected">Експрес</option>
+        </select><br/>
+        <input class="form-control" placeholder="Кімната" type="text" id="room"><br/>
+        <button class="btn btn-light dbgmid" type="button"
+        onclick="addToQueue()" id="add2q ">Добавити в чергу</button>
+        <br/>
+      </form>
+
+      <br/>
+      <table class="table table-dark table-bordered table-stripped" id="queue">
+        <tr>
+          <th scope="col">Початок</th>
+          <th scope="col">Завершення</th>
+          <th scope="col">Кімната</th>
+        </tr>
+      </table>
+
+      <img class="img-thumbnail dbgmid" src="cat1.gif" alt="animated kitten here">
+      </img>
+
+      <footer class="dbgmid">
+        <b>Made by <a class="text-secondary" href="https://t.me/OlexiyUA" id="dbuglink">d-bug</a></b>
+      </footer>
+    </div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="script-fb.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
